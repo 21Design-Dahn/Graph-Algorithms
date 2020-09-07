@@ -16,25 +16,6 @@ class Node{
 
     }
 
-    Node(const Node<T>*&& other)
-      : edges(other->edges), parent(other->parent),
-        searched(other->searched), value(other->value)
-    {
-      std:: cout << "copied ptr..." << std:: endl;
-    }
-
-    Node(const Node<T>& other)
-      : edges(other.edges), parent(other.parent),
-        searched(other.searched), value(other.value)
-    {
-      std:: cout << "copied..." << std:: endl;
-    }
-
-    Node& operator=(const Node<T>& other){
-      std:: cout<< "copy assign" << std:: endl;
-      return *this;
-    }
-
     void AddEdge(Node<T>* n){
       edges.push_back(n);
 
